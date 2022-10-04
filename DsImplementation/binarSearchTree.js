@@ -93,6 +93,40 @@ class BinarySearchTree {
       console.log(root.value);
     }
   }
+  // BFS
+  levelOrder() {
+    let queue = [];
+    queue.push(this.root);
+    while (queue.length) {
+      let current = queue.shift();
+      // console.log(current.value);
+
+      if (current.left) {
+        queue.push(current.left);
+      }
+      if (current.right) {
+        queue.push(current.right);
+      }
+    }
+  }
+
+  min(root) {
+    if (!root.left) {
+      console.log(root.value);
+      return root.value;
+    } else {
+      this.min(root.left);
+    }
+  }
+
+  max(root) {
+    if (!root.right) {
+      console.log(root.value);
+      return;
+    } else {
+      this.max(root.right);
+    }
+  }
 }
 
 let bst = new BinarySearchTree();
@@ -101,6 +135,7 @@ bst.insertNewNode(10);
 bst.insertNewNode(11);
 bst.insertNewNode(12);
 bst.insertNewNode(13);
+bst.insertNewNode(100);
 bst.insertNewNode(4);
 bst.insertNewNode(3);
 bst.insertNewNode(2);
@@ -108,10 +143,15 @@ bst.insertNewNode(1);
 bst.insertNewNode(5);
 bst.insertNewNode(6);
 bst.print();
-console.log("preOrder");
-bst.preOrder(bst.root);
-console.log("inOrder");
-bst.inOrder(bst.root);
-console.log("postOrder");
-bst.postOrder(bst.root);
+// Dfs
+// console.log("preOrder");
+// bst.preOrder(bst.root);
+// console.log("inOrder");
+// bst.inOrder(bst.root);
+// console.log("postOrder");
+// bst.postOrder(bst.root);
 // console.log(bst.search(bst.root, 13));
+
+bst.levelOrder();
+bst.min(bst.root);
+bst.max(bst.root);
