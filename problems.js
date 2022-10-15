@@ -1,3 +1,71 @@
+
+let jewels = "z",
+stones = "ZZ";
+
+let k = 0;
+let count = 0;
+for (let i = 0; i < jewels.length; i++) {
+for (let j = 0; j < stones.length; j++) {
+  jewels[i] === stones[j] ? count++ : null;
+}
+}
+
+console.log(count);
+
+
+
+let number = [8, 1, 2, 2, 3];
+
+let arr = [];
+
+for (let i = 0; i < number.length; i++) {
+  console.log(arr);
+  let j = 0;
+  let count = 0;
+  while (j < number.length) {
+    if (number[i] > number[j]) {
+      j++;
+      count++;
+    } else {
+      j++;
+    }
+  }
+
+  arr.push(count);
+}
+
+console.log(arr);
+
+// --------------------------------------------------------
+var sound = "grunt";
+
+var bear = { sound: "roar" };
+
+function roar() {
+  console.log(this.sound);
+}
+
+roar.apply(bear);
+
+let cat = Object.create({ name: "Mohan" });
+
+cat.size = "large";
+let copyCat = { ...cat };
+cat.type = "tiger";
+
+console.log(copyCat);
+
+// ________________________________________________________________
+let animals = [{ type: "lion" }, "tiger"];
+
+let clone = animals.slice();
+clone[0].type = "bear";
+clone[1].type = "sheep";
+
+console.log(animals);
+console.log(animals[0].type, clone[0].type);
+console.log(animals[1], clone[1]);
+
 // cartesian of the product
 
 function cartesian() {
@@ -40,7 +108,6 @@ function ZeroOne() {
 
 ZeroOne();
 
-
 let vowels = ["a", "e", "i", "o", "u"];
 
 let str = "Mohaniouuuknj";
@@ -52,9 +119,7 @@ for (let i = 0; i < str.length; i++) {
   }
 }
 
-console.log(result  );
-
-
+console.log(result);
 
 let num = 1004;
 
@@ -63,4 +128,3 @@ let numberArray = Array.from(String(num));
 console.log(
   numberArray.map((data) => (data === "0" ? (data = "5") : data)).join("")
 );
-

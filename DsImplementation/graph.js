@@ -6,7 +6,7 @@ class Graph {
   addVertex(vertex) {
     if (!this.adjacencyList[vertex]) {
       this.adjacencyList[vertex] = new Set();
-      console.log(this.adjacencyList);
+      // console.log(this.adjacencyList);
     }
   }
   addEdge(vertex1, vertex2) {
@@ -35,6 +35,18 @@ class Graph {
       this.adjacencyList[vertex2].has(vertex1)
     );
   }
+
+  removeEdge(vertex1, vertex2) {
+    console.log(vertex1, vertex2);
+  }
+
+  removeVertex(vertex) {
+    if (!this.adjacencyList[vertex]) return;
+
+    for (let adjacentVertex of this.adjacencyList[vertex]) {
+      this.removeEdge(vertex, adjacentVertex);
+    }
+  }
 }
 
 let graph = new Graph();
@@ -50,3 +62,5 @@ graph.addEdge("B", "C");
 graph.print();
 
 console.log(graph.hasEdge("A", "C"));
+
+graph.removeVertex("B");
