@@ -1,7 +1,8 @@
-var strs = ["abc", "def", "ghi", "jkl", "mno"];
-var value = "abc";
-const fdaa = strs.find(function (str) {
-  return str == value;
-});
-
-console.log(fdaa);
+let data = {
+  id: 2456,
+  value: "A'ana",
+  country: "Samoa",
+  gst_code: null,
+  region_id: null,
+  country_code: "WS",
+};

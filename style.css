@@ -1,6 +1,16 @@
-.container {
+:root {
+  --color: red;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color: rgb(0, 0, 0);
+  }
+}
+#transition {
   /* height: 100vh; */
-  background-color: aqua;
+  background-color: var(--color);
   display: flex;
   align-items: center;
   justify-content: center;

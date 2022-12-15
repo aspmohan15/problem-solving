@@ -1,4 +1,4 @@
-const country = [
+export const country = [
   {
     id: 2456,
     value: "A'ana",
