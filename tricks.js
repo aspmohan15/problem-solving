@@ -208,3 +208,6 @@ function CreateZone() {
 }
 
 export default CreateZone;
+
+
+Object.entries(suppliersMarkup).map(([key, value]) => ({ [key]: value }))
