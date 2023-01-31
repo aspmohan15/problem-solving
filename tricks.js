@@ -211,3 +211,15 @@ export default CreateZone;
 
 
 Object.entries(suppliersMarkup).map(([key, value]) => ({ [key]: value }))
+
+if (response.data.length > 0) {
+  let value = response?.data?.map((zoneList) => {
+    paymentGateWayList.data.map((payment) => {
+      console.log(payment);
+      if (zoneList.payment_gateway === payment.id) {
+        zoneList["payment_gateway"] = payment.gateway_name;
+      }
+    });
+    return zoneList;
+  });
+
