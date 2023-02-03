@@ -37,22 +37,22 @@
     }
 
     .flex {
-      display: flex;
+      /* display: flex;
       gap: 0 10%;
       padding-bottom: .5rem;
       align-items: flex-start;
       padding: 0;
-      margin: 0;
+      margin: 0; */
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: start
     }
 
     .flex_space {
-      display: flex;
-      gap: 0 10%;
-      padding-bottom: .5rem;
-      align-items: flex-start;
-      padding: 0;
-      margin: 0;
-      padding-bottom: .5rem;
+
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: start;
 
     }
 
@@ -76,14 +76,22 @@
     }
 
     .rbd__row__title {
-      min-width: 25%;
-      max-width: 40%;
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+      min-width: 176px;
+
 
     }
 
     .rbd__row__data {
-      min-width: 15%;
-      max-width: 40%;
+      padding: 0;
+      margin: 0;
+      /* min-width: 100px; */
+      /* max-width: 100%; */
+      font-size: 12px;
+      /* min-width: 15%; */
+      /* max-width: 40%; */
 
 
     }
@@ -154,8 +162,8 @@
     }
 
     body {
-      /* height: 29.7cm; */
-      height: auto;
+      height: 29.7cm;
+      /* height: auto; */
       padding: 10mm 10mm 10mm 10mm;
       font-size: 11px;
       font-family: 'Times New Roman', Times, serif;
@@ -192,29 +200,41 @@
 
 <body class="full-padding full-padding">
   <table class="table" id="table">
-    <tr class="title__header">
+    <!-- <tr class="title__header">
       <th colspan="8" class="td_data">
+      </th>
+    </tr> -->
+    <tr>
+      <td colspan="2">
+        <div class="image__container">
+          <img src="2HubLogo.png" />
+        </div>
+      </td>
+      <td colspan="4">
         <h1 class="page_header">TAX CREDIT NOTE</h1>
-        <div class="table__header">
-
-          <div class="image__container">
-            <img src="2HubLogo.png" />
-          </div>
-
-          <div class="title__header">
-            <br>
+        <div class="title__header">
+          <div style="text-align: center; padding-top: .7rem;">
             2HUB Private Limited </br>
             898, Udyog Vihar Phase 1, Gurgaon-122016, Haryana, India
-            </p>
             <p><a href="mailto:support@2hub.travel">support@2hub.travel</a></p>
           </div>
-          <div class="image__container">
-            <img src="2HubLogo.png" />
-          </div>
+          </p>
         </div>
-      </th>
+      </td>
+      <td colspan="2">
+        <div class="image__container">
+          <img src="2HubLogo.png" />
+        </div>
+      </td>
     </tr>
 
+    <div class="table__header">
+
+
+
+
+
+    </div>
     <tr>
       <td colspan="2" class="td_data"><strong>IRN</strong></td>
       <td colspan="6" class="td_data">e736c5b8cec087478b3f159b7aa08299959dfdae3cae8f0537ce91fedd497cc6</td>
@@ -359,7 +379,7 @@
       </td>
     </tr>
     <tr class="">
-      <td class="td_data" colspan="8" style="padding: 1%;">
+      <td class="invoice__td" colspan="8" style="padding: 1%;">
         <div style="padding-bottom: .5rem;"><b>
             <strong>
               <u>
@@ -368,6 +388,7 @@
             </strong>
           </b>
         </div>
+
         <div class="flex_space">
           <div class="rbd__row__title"><b>Beneficiary Account Name</b></div>
           <div class="rbd__row__data">2HUB Pvt. Ltd.</div>
